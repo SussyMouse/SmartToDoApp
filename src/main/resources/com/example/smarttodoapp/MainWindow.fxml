@@ -16,7 +16,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.Priority?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
@@ -55,7 +54,7 @@
                         </ImageView>
                      </children>
                      <HBox.margin>
-                        <Insets left="50.0" />
+                        <Insets left="50.0" top="20.0" />
                      </HBox.margin>
                   </StackPane>
                </children>
@@ -65,21 +64,29 @@
                   <Font name="Segoe UI" size="24.0" />
                </font>
                <VBox.margin>
-                  <Insets left="40.0" />
+                  <Insets left="40.0" top="25.0" />
                </VBox.margin>
             </Label>
             <ComboBox prefWidth="150.0" promptText="Category" style="-fx-pref-width: 180; -fx-background-radius: 5;">
                <VBox.margin>
-                  <Insets left="40.0" />
+                  <Insets left="40.0" top="25.0" />
                </VBox.margin></ComboBox>
             <ComboBox prefWidth="150.0" promptText="Priority" style="-fx-pref-width: 180; -fx-background-radius: 5;">
                <VBox.margin>
-                  <Insets left="40.0" />
+                  <Insets left="40.0" top="25.0" />
                </VBox.margin></ComboBox>
             <DatePicker style="-fx-pref-width: 180; -fx-background-radius: 5;">
                <VBox.margin>
-                  <Insets left="40.0" />
+                  <Insets left="40.0" top="25.0" />
                </VBox.margin></DatePicker>
+            <Button mnemonicParsing="false" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-pref-width: 140; -fx-pref-height: 30; -fx-background-radius: 30;" text="Apply">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" top="100.0" />
+               </VBox.margin>
+            </Button>
          </children>
       </VBox>
    </left>
@@ -90,20 +97,19 @@
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
-                        <MenuItem mnemonicParsing="false" text="Input file" />
+                        <MenuItem mnemonicParsing="false" text="Add Task" />
                         <MenuItem mnemonicParsing="false" text="Save" />
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                        <MenuItem mnemonicParsing="false" text="Exit" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
+                    <MenuItem mnemonicParsing="false" text="Print" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                   <items>
                     <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Exit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Exit Program" />
                   </items>
                 </Menu>
               </menus>
