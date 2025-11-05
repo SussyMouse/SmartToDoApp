@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+      style="-fx-background-color: linear-gradient(to right, #000000, #737373); -fx-pref-height: 800; -fx-pref-width: 1280;"
+      xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.smarttodoapp.TaskInfoController">
+   <children>
+      <MenuBar>
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Input file" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Exit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+       <Label fx:id="taskNameLabel" text="Task" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="50.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="50.0" left="40.0" top="30.0" />
+         </VBox.margin>
+      </Label>
+       <VBox spacing="24.0">
+           <children>
+               <HBox alignment="BASELINE_LEFT" spacing="20.0">
+                   <children>
+                       <Label text="Description:" textFill="#b4b4b4">
+                           <font>
+                               <Font name="Segoe UI" size="25.0" />
+                           </font>
+                       </Label>
+                       <Label fx:id="taskDescriptionLabel" prefWidth="950.0" textFill="WHITE" wrapText="true">
+                           <font>
+                               <Font name="Segoe UI" size="20.0" />
+                           </font>
+                       </Label>
+                   </children>
+               </HBox>
+               <HBox alignment="BASELINE_LEFT" spacing="12.0">
+                   <children>
+                       <Label text="Category:" textFill="#b4b4b4">
+                           <font>
+                               <Font name="Segoe UI" size="25.0" />
+                           </font>
+                       </Label>
+                       <Label fx:id="taskCategoryLabel" textFill="WHITE">
+                           <font>
+                               <Font name="Segoe UI" size="20.0" />
+                           </font>
+                       </Label>
+                       <ImageView fx:id="categoryIconView" fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" visible="false" managed="false" />
+                   </children>
+               </HBox>
+               <HBox alignment="BASELINE_LEFT" spacing="20.0">
+                   <children>
+                       <Label text="Priority:" textFill="#b4b4b4">
+                           <font>
+                               <Font name="Segoe UI" size="25.0" />
+                           </font>
+                       </Label>
+                       <Label fx:id="taskPriorityLabel" textFill="WHITE">
+                           <font>
+                               <Font name="Segoe UI" size="20.0" />
+                           </font>
+                       </Label>
+                   </children>
+               </HBox>
+               <HBox alignment="BASELINE_LEFT" spacing="20.0">
+                   <children>
+                       <Label text="Due Date:" textFill="#b4b4b4">
+                           <font>
+                               <Font name="Segoe UI" size="25.0" />
+                           </font>
+                       </Label>
+                       <Label fx:id="taskDueDateLabel" textFill="WHITE">
+                           <font>
+                               <Font name="Segoe UI" size="20.0" />
+                           </font>
+                       </Label>
+                   </children>
+               </HBox>
+               <HBox alignment="BASELINE_LEFT" spacing="20.0">
+                   <children>
+                       <Label text="Status:" textFill="#b4b4b4">
+                           <font>
+                               <Font name="Segoe UI" size="25.0" />
+                           </font>
+                       </Label>
+                       <Label fx:id="taskStatusLabel" textFill="WHITE">
+                           <font>
+                               <Font name="Segoe UI" size="20.0" />
+                           </font>
+                       </Label>
+                   </children>
+               </HBox>
+           </children>
+         <VBox.margin>
+            <Insets bottom="40.0" left="40.0" />
+         </VBox.margin>
+       </VBox>
+       <Region prefHeight="180.0" prefWidth="1280.0" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+         <children>
+             <Button fx:id="markCompleteButton" mnemonicParsing="false" onAction="#toggleCompleted" prefWidth="210.0"
+                     style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-background-radius: 20;"
+                     text="Mark as Completed">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Button>
+             <Button mnemonicParsing="false" onAction="#editTask" prefWidth="150.0"
+                     style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-background-radius: 20;"
+                     text="Edit Task">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Button>
+             <Button mnemonicParsing="false" onAction="#close" prefWidth="150.0"
+                     style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-background-radius: 20;"
+                     text="Close">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

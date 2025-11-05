@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-pref-height: 800; -fx-pref-width: 1280; -fx-background-color: linear-gradient(to right, #000000, #737373);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smarttodoapp.MainController">
+   <left>
+      <VBox prefHeight="805.0" prefWidth="100.0" spacing="25.0" style="-fx-pref-width: 250;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="125.0" prefWidth="250.0">
+               <children>
+                  <ImageView scaleX="1.2" scaleY="1.2" scaleZ="1.2" translateX="100.0" translateY="40.0">
+                     <image>
+                        <Image url="@../../../images/icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="CENTER_RIGHT" mnemonicParsing="false" style="-fx-pref-width: 180; -fx-pref-height: 40; -fx-background-color: linear-gradient(to right, #000000, #3533cd); -fx-background-radius: 40;" text="Tasks" textFill="#b4b4b4">
+                           <font>
+                              <Font name="Segoe UI" size="31.0" />
+                           </font>
+                        </Button>
+                        <ImageView>
+                           <image>
+                              <Image url="@../../../images/All%20Task%20Logo.png" />
+                           </image>
+                           <StackPane.margin>
+                              <Insets right="100.0" />
+                           </StackPane.margin>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </StackPane>
+               </children>
+            </HBox>
+            <Label text="Filter by:" textFill="#b4b4b4">
+               <font>
+                  <Font name="Segoe UI" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox prefWidth="150.0" promptText="Category" style="-fx-pref-width: 180; -fx-background-radius: 5;">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin></ComboBox>
+            <ComboBox prefWidth="150.0" promptText="Priority" style="-fx-pref-width: 180; -fx-background-radius: 5;">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin></ComboBox>
+            <DatePicker style="-fx-pref-width: 180; -fx-background-radius: 5;">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin></DatePicker>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <VBox prefHeight="26.0" prefWidth="1280.0" style="-fx-pref-height: 25;" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" text="Input file" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Exit" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="150.0" prefWidth="472.0" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff);">
+               <children>
+                  <Label alignment="TOP_LEFT" prefHeight="66.0" prefWidth="1030.0" text="Smart ToDo Application" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Segoe UI Black" size="44.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="100.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1030.0">
+               <children>
+                  <Label prefWidth="130.0" text="Tasks" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Black" size="44.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="75.0" right="350.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#switchToTaskFormScene" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-pref-width: 140; -fx-pref-height: 30; -fx-background-radius: 30;" text="Add Task">
+                     <font>
+                        <Font name="Segoe UI" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <ImageView fitHeight="50.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@../../../images/search.png" />
+                     </image>
+                  </ImageView>
+                  <TextField promptText="Search" style="-fx-background-radius: 5;">
+                     <font>
+                        <Font name="Segoe UI" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+             <ListView fx:id="taskListView" prefHeight="200.0" prefWidth="200.0" styleClass="task-list" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox fillHeight="false" prefHeight="100.0" prefWidth="1079.0" spacing="25.0" style="-fx-pref-height: 40;" BorderPane.alignment="BOTTOM_RIGHT">
+         <children>
+            <Label text="Priority Level:" textFill="#737373" translateX="250.0">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+               <padding>
+                  <Insets right="50.0" />
+               </padding>
+            </Label>
+            <Label text="1st:" textFill="#737373" translateX="250.0">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <Circle fill="#ff3131" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="250.0">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Circle>
+            <Label text="2nd:" textFill="#737373" translateX="250.0">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <Circle fill="#ff914d" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="250.0">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Circle>
+            <Label text="3rd:" textFill="#737373" translateX="250.0">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <Circle fill="#004aad" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="250.0">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Circle>
+            <Label text="4th:" textFill="#737373" translateX="250.0">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <Circle fill="#d9d9d9" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="250.0" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
