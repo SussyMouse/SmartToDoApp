@@ -67,19 +67,23 @@
                   <Insets left="40.0" top="25.0" />
                </VBox.margin>
             </Label>
-            <ComboBox prefWidth="150.0" promptText="Category" style="-fx-pref-width: 180; -fx-background-radius: 5;">
+            <ComboBox fx:id="categoryFilter" prefWidth="150.0" promptText="Category" style="-fx-pref-width: 180; -fx-background-radius: 5;">
                <VBox.margin>
                   <Insets left="40.0" top="25.0" />
                </VBox.margin></ComboBox>
-            <ComboBox prefWidth="150.0" promptText="Priority" style="-fx-pref-width: 180; -fx-background-radius: 5;">
+            <ComboBox fx:id="completionFilter" prefWidth="150.0" promptText="Status" style="-fx-pref-width: 180; -fx-background-radius: 5;">
                <VBox.margin>
                   <Insets left="40.0" top="25.0" />
                </VBox.margin></ComboBox>
-            <DatePicker style="-fx-pref-width: 180; -fx-background-radius: 5;">
+            <ComboBox fx:id="priorityFilter" prefWidth="150.0" promptText="Priority" style="-fx-pref-width: 180; -fx-background-radius: 5;">
+                <VBox.margin>
+                    <Insets left="40.0" top="25.0" />
+                </VBox.margin></ComboBox>
+             <DatePicker fx:id="dateFilter" style="-fx-pref-width: 180; -fx-background-radius: 5;">
                <VBox.margin>
                   <Insets left="40.0" top="25.0" />
                </VBox.margin></DatePicker>
-            <Button mnemonicParsing="false" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-pref-width: 140; -fx-pref-height: 30; -fx-background-radius: 30;" text="Apply">
+            <Button mnemonicParsing="false" onAction="#applyFilters" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-pref-width: 140; -fx-pref-height: 30; -fx-background-radius: 30;" text="Apply">
                <font>
                   <Font name="Segoe UI" size="20.0" />
                </font>
@@ -158,7 +162,7 @@
                         <Image url="@../../../images/search.png" />
                      </image>
                   </ImageView>
-                  <TextField promptText="Search" style="-fx-background-radius: 5;">
+                  <TextField fx:id="searchField" promptText="Search" style="-fx-background-radius: 5;">
                      <font>
                         <Font name="Segoe UI" size="20.0" />
                      </font>
