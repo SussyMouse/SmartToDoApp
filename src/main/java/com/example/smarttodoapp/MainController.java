@@ -3,6 +3,7 @@ package com.example.smarttodoapp;
 import com.example.smarttodoapp.data.TaskStore;
 import com.example.smarttodoapp.model.Task;
 import com.example.smarttodoapp.model.TaskListCell;
+import javafx.application.Platform;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -69,23 +70,45 @@ public class MainController {
 
     @FXML
     public void switchToTaskFormScene(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("TaskFormDialog.fxml"));
-        Parent dialogRoot = loader.load();
-        TaskFormController controller = loader.getController();
-        controller.setTasks(tasks);
-
         Stage owner = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Stage dialog = new Stage();
-        dialog.initOwner(owner);
-        dialog.initModality(Modality.APPLICATION_MODAL);
-        dialog.setTitle("Add Task");
-        dialog.setScene(new Scene(dialogRoot));
-        dialog.showAndWait();
+        showTaskFormDialog(owner);
+    }
 
-        taskListView.refresh();
-        updateCategoryOptions();
-        updatePriorityOptions();
-        applyFilters();
+    @FXML
+    public void handleAddTaskMenuAction() throws IOException {
+        showTaskFormDialog(getCurrentStage());
+    }
+
+    @FXML
+    public void clearCompletedTasks() {
+        if (tasks == null || tasks.isEmpty()) {
+            return;
+        }
+
+        boolean removed = tasks.removeIf(Task::isCompleted);
+        if (removed) {
+            TaskStore.save(tasks);
+            refreshTaskView();
+        }
+    }
+
+    @FXML
+    public void clearOverdueTasks() {
+        if (tasks == null || tasks.isEmpty()) {
+            return;
+        }
+
+        LocalDate today = LocalDate.now();
+        boolean removed = tasks.removeIf(task -> task.getDueDate() != null && task.getDueDate().isBefore(today));
+        if (removed) {
+            TaskStore.save(tasks);
+            refreshTaskView();
+        }
+    }
+
+    @FXML
+    public void handleExitApplication() {
+        Platform.exit();
     }
 
     @FXML
@@ -228,5 +251,37 @@ public class MainController {
 
             return true;
         });
+    }
+
+    private void showTaskFormDialog(Stage owner) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("TaskFormDialog.fxml"));
+        Parent dialogRoot = loader.load();
+        TaskFormController controller = loader.getController();
+        controller.setTasks(tasks);
+
+        Stage dialog = new Stage();
+        if (owner != null) {
+            dialog.initOwner(owner);
+            dialog.initModality(Modality.APPLICATION_MODAL);
+        }
+        dialog.setTitle("Add Task");
+        dialog.setScene(new Scene(dialogRoot));
+        dialog.showAndWait();
+
+        refreshTaskView();
+    }
+
+    private void refreshTaskView() {
+        taskListView.refresh();
+        updateCategoryOptions();
+        updatePriorityOptions();
+        applyFilters();
+    }
+
+    private Stage getCurrentStage() {
+        if (taskListView != null && taskListView.getScene() != null) {
+            return (Stage) taskListView.getScene().getWindow();
+        }
+        return null;
     }
 }

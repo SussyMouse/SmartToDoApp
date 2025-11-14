@@ -101,9 +101,9 @@
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
-                        <MenuItem mnemonicParsing="false" text="Add Task" />
-                        <MenuItem mnemonicParsing="false" text="Save" />
-                    <MenuItem mnemonicParsing="false" text="Print" />
+                      <MenuItem mnemonicParsing="false" onAction="#handleAddTaskMenuAction" text="Add Task" />
+                      <MenuItem mnemonicParsing="false" onAction="#clearCompletedTasks" text="Clear Completed Tasks" />
+                      <MenuItem mnemonicParsing="false" onAction="#clearOverdueTasks" text="Clear Overdue Tasks" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
@@ -111,11 +111,10 @@
                     <MenuItem mnemonicParsing="false" text="About" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Exit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Exit Program" />
-                  </items>
-                </Menu>
+                <Menu mnemonicParsing="false" onAction="#handleExitApplication" text="Exit">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Exit Program" />
+                     </items></Menu>
               </menus>
             </MenuBar>
          </children>
