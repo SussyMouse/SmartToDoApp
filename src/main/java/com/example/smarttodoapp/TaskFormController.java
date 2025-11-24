@@ -16,6 +16,18 @@ import javafx.stage.Stage;
 
 import java.time.LocalDate;
 
+/**
+ * Controller for the task creation and editing dialog.
+ *
+ * References:
+ *   JavaFX ComboBox API for populating selectable task categories and priorities:
+ *   <a href="https://openjfx.io/javadoc/21/javafx.controls/javafx/scene/control/ComboBox.html">...</a>
+ *   JavaFX DatePicker reference for configuring due date selection widgets:
+ *   <a href="https://openjfx.io/javadoc/21/javafx.controls/javafx/scene/control/DatePicker.html">...</a>
+ *   JavaFX Alerts tutorial that guides the validation warnings shown before saving:
+ *   <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Alert.html">...</a>
+ */
+
 public class TaskFormController {
 
     @FXML

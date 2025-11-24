@@ -21,6 +21,19 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
+/**
+ * Controller backing the read-only task information dialog.
+ *
+ * References:
+ *   JavaFX documentation for loading dialog layouts from FXML:
+ *   <a href="https://openjfx.io/javadoc/21/javafx.fxml/javafx/fxml/FXMLLoader.html">...</a>
+ *   JavaFX Stage modality guidance, informing how the info dialog blocks interaction with the
+ *   owner window when presented:
+ *   <a href="https://openjfx.io/javadoc/21/javafx.graphics/javafx/stage/Modality.html">...</a>
+ *   JavaFX ImageView reference that describes how category icons are placed into the dialog:
+ *   <a href="https://openjfx.io/javadoc/21/javafx.graphics/javafx/scene/image/ImageView.html">...</a>
+ */
+
 public class TaskInfoController {
 
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("MM/dd/yyyy");

@@ -10,6 +10,16 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.util.List;
 
+
+/**
+ * Persists tasks to disk using Jackson's data binding and Java Time support.
+ *
+ * References:
+ *   Jackson ObjectMapper usage examples for reading/writing JSON:
+ *   “<a href="https://github.com/FasterXML/jackson-databind#using-data-binding-annotations">...</a>”
+ *   JavaTimeModule documentation for serializing:
+ *   “<a href="https://github.com/FasterXML/jackson-modules-java8/tree/master/datetime">...</a>”
+ */
 public class TaskStore {
 
     // Use uppercase name and use the same name everywhere

@@ -8,6 +8,10 @@ import java.util.Map;
 
 /**
  * Provides shared access to category icons stored in the application resources.
+ *
+ * Reference: JavaFX API for loading and displaying images from packaged
+ * resources, which guides how icons are retrieved for category display:
+ * "<a href="https://openjfx.io/javadoc/21/javafx.graphics/javafx/scene/image/Image.html">...</a>"
  */
 public final class CategoryIconProvider {
 

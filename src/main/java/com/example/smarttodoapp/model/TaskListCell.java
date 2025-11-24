@@ -30,6 +30,19 @@ import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 import java.io.IOException;
 
+/**
+ * Custom implementation that renders task metadata and action buttons.
+ *
+ * References:
+ *   Oracle JavaFX ListView tutorial for building custom cells and action handlers:
+ *   <a href="https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/list-view.htm">...</a>
+ *   OpenJFX dialog modality guidance used when wiring the task info and edit dialogs:
+ *   <a href="https://openjfx.io/javadoc/21/javafx.graphics/javafx/stage/Modality.html">...</a>
+ *   JavaFX Buttons tutorial demonstrating how to use an image as a button graphic:
+ *   <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Button.html">...</a>
+ *   <a href="https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/button.htm">...</a>
+ *
+ */
 public class TaskListCell extends ListCell<Task> {
 
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("MM/dd/yyyy");

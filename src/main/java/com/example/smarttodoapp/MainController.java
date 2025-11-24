@@ -29,6 +29,17 @@ import java.time.LocalDate;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+
+/**
+ * Controller for the main task view that wires filtering, searching, and list updates.
+ *
+ * References:
+ *   - JavaFX API for live list filtering:
+ *   "<a href="https://openjfx.io/javadoc/21/javafx.base/javafx/collections/transformation/FilteredList.html">...</a>"
+ *   - Oracle ListView cell factory guidance used as a basis for configuring:
+ *   "<a href="https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/list-view.htm">...</a>"
+ */
+
 public class MainController {
     @FXML
     private ListView<Task> taskListView;
