@@ -292,7 +292,9 @@ public class TaskListCell extends ListCell<Task> {
         }
         dialog.initModality(Modality.APPLICATION_MODAL);
         dialog.setTitle(title);
-        dialog.setScene(new Scene(root));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("/com/example/smarttodoapp/styles.css").toExternalForm());
+        dialog.setScene(scene);
         return dialog;
     }
 

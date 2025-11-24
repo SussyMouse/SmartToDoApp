@@ -83,7 +83,10 @@ public class TaskInfoController {
             }
             editStage.initModality(Modality.APPLICATION_MODAL);
             editStage.setTitle("Edit Task");
-            editStage.setScene(new Scene(root));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
+
+            editStage.setScene(scene);
             editStage.showAndWait();
 
             refreshTaskDetails();

@@ -129,6 +129,8 @@
     -fx-border-width: 2px;
     -fx-border-radius: 6;
     -fx-background-radius: 6;
+    -fx-control-inner-background: transparent;
+    -fx-background-insets: 0;
 }
 
 .filter-combo-box .list-cell {
@@ -195,6 +197,8 @@
     -fx-border-width: 2px;
     -fx-border-radius: 6;
     -fx-background-radius: 6;
+    -fx-control-inner-background: transparent;
+    -fx-background-insets: 0;
 }
 
 .filter-date-picker .text-input {
@@ -226,12 +230,15 @@
     -fx-font-family: "Segoe UI";
     -fx-font-size: 20px;
     -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
     -fx-border-color: #b4b4b4;
     -fx-border-width: 2px;
     -fx-border-radius: 6;
     -fx-background-radius: 6;
     -fx-text-fill: #ffffff;
     -fx-prompt-text-fill: #b4b4b4;
+    -fx-background-insets: 0;
+    -fx-padding: 8 10;
 }
 
 .form-text-input.text-area,
@@ -239,4 +246,57 @@
 .form-text-input.text-area .scroll-pane .viewport,
 .form-text-input.text-area .scroll-pane .content {
     -fx-background-color: transparent;
+}
+
+.form-text-input:focused {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
+}
+
+.filter-combo-box,
+.filter-combo-box:focused {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 6 10;
+}
+
+.filter-combo-box > .arrow-button,
+.filter-combo-box:focused > .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.filter-combo-box > .list-cell,
+.filter-combo-box > .text-input {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+}
+
+.filter-date-picker,
+.filter-date-picker:focused {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 6 10;
+}
+
+.filter-date-picker > .text-input,
+.filter-date-picker > .arrow-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #000000;
+}
+
+.filter-date-picker > .arrow-button > .arrow {
+    -fx-background-color: #b4b4b4;
+}
+
+.filter-date-picker .cell,
+.filter-date-picker .cell:hover,
+.filter-date-picker .cell:focused,
+.filter-date-picker .cell:selected {
+    -fx-text-fill: #000000;
+}
+
+.filter-date-picker .text-input {
+    -fx-prompt-text-fill: #666666;
 }
