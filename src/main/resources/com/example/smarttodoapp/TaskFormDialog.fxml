@@ -63,7 +63,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField fx:id="taskNameTextField" promptText="Task Name:" style="-fx-background-radius: 5;">
+            <TextField fx:id="taskNameTextField" promptText="Task Name:" style="-fx-background-radius: 5;" styleClass="form-text-input">
                <font>
                   <Font name="Segoe UI" size="20.0" />
                </font>
@@ -71,7 +71,7 @@
                   <Insets bottom="50.0" />
                </GridPane.margin>
             </TextField>
-            <TextArea fx:id="taskDescriptionTextField" prefHeight="45.0" prefWidth="939.0" promptText="Description:" style="-fx-background-radius: 5;" GridPane.rowIndex="1">
+            <TextArea fx:id="taskDescriptionTextField" prefHeight="45.0" prefWidth="939.0" promptText="Description:" style="-fx-background-radius: 5;" styleClass="form-text-input" GridPane.rowIndex="1">
                <font>
                   <Font name="Segoe UI" size="20.0" />
                </font>
@@ -84,17 +84,17 @@
             <Insets bottom="50.0" left="40.0" />
          </VBox.margin>
       </GridPane>
-      <ComboBox fx:id="taskCategoryComboBox" prefWidth="180.0" promptText="Category" style="-fx-background-radius: 5;">
+      <ComboBox fx:id="taskCategoryComboBox" prefWidth="180.0" promptText="Category" style="-fx-background-radius: 5;" styleClass="filter-combo-box">
          <VBox.margin>
             <Insets bottom="50.0" left="40.0" />
          </VBox.margin>
       </ComboBox>
-       <ComboBox fx:id="taskPriorityComboBox" prefWidth="180.0" promptText="Priority" style="-fx-background-radius: 5;">
+       <ComboBox fx:id="taskPriorityComboBox" prefWidth="180.0" promptText="Priority" style="-fx-background-radius: 5;" styleClass="filter-combo-box">
          <VBox.margin>
             <Insets bottom="50.0" left="40.0" />
          </VBox.margin>
       </ComboBox>
-      <DatePicker fx:id="taskDueDateDatePicker" prefWidth="180.0" style="-fx-background-radius: 5;">
+      <DatePicker fx:id="taskDueDateDatePicker" prefWidth="180.0" style="-fx-background-radius: 5;" styleClass="filter-date-picker">
          <VBox.margin>
             <Insets bottom="50.0" left="40.0" />
          </VBox.margin>

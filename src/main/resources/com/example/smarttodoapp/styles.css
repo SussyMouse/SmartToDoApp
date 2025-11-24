@@ -120,3 +120,123 @@
 .task-card.completed .task-meta {
     -fx-strikethrough: true;
 }
+
+.filter-combo-box {
+    -fx-background-color: transparent;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+    -fx-border-color: #b4b4b4;
+    -fx-border-width: 2px;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.filter-combo-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #b4b4b4;
+}
+
+.filter-combo-box .arrow {
+    -fx-background-color: #b4b4b4;
+}
+
+.filter-combo-box:hover {
+    -fx-background-color: #b4b4b4;
+}
+
+.filter-combo-box:hover .list-cell {
+    -fx-text-fill: #000000;
+}
+
+.filter-combo-box:hover .arrow {
+    -fx-background-color: #000000;
+}
+
+.filter-combo-box:showing {
+    -fx-background-color: black;
+}
+
+.filter-combo-box:showing .list-cell {
+    -fx-text-fill: white;
+}
+
+.filter-combo-box:showing .arrow {
+    -fx-background-color: white;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #2a2a2a;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 4);
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #000000;
+    -fx-font-family: "Segoe UI";
+    -fx-padding: 8 12;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #d9d9d9;
+    -fx-text-fill: #000000;
+}
+
+.combo-box-popup .list-cell:filled:selected {
+    -fx-background-color: #b4b4b4;
+    -fx-text-fill: #000000;
+}
+
+.filter-date-picker {
+    -fx-background-color: transparent;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+    -fx-border-color: #b4b4b4;
+    -fx-border-width: 2px;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.filter-date-picker .text-input {
+    -fx-background-color: transparent;
+    -fx-text-fill: #b4b4b4;
+}
+
+.filter-date-picker .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.filter-date-picker .arrow-button .arrow {
+    -fx-background-color: #b4b4b4;
+}
+
+.filter-date-picker:hover {
+    -fx-background-color: #b4b4b4;
+}
+
+.filter-date-picker:hover .text-input {
+    -fx-text-fill: #000000;
+}
+
+.filter-date-picker:hover .arrow-button .arrow {
+    -fx-background-color: #000000;
+}
+
+.form-text-input {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 20px;
+    -fx-background-color: transparent;
+    -fx-border-color: #b4b4b4;
+    -fx-border-width: 2px;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #b4b4b4;
+}
+
+.form-text-input.text-area,
+.form-text-input.text-area .scroll-pane,
+.form-text-input.text-area .scroll-pane .viewport,
+.form-text-input.text-area .scroll-pane .content {
+    -fx-background-color: transparent;
+}

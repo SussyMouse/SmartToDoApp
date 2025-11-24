@@ -43,6 +43,9 @@
                            <font>
                               <Font name="Segoe UI" size="31.0" />
                            </font>
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
                         </Button>
                         <ImageView>
                            <image>
@@ -54,8 +57,11 @@
                         </ImageView>
                      </children>
                      <HBox.margin>
-                        <Insets left="50.0" top="20.0" />
+                        <Insets left="50.0" top="25.0" />
                      </HBox.margin>
+                     <padding>
+                        <Insets top="25.0" />
+                     </padding>
                   </StackPane>
                </children>
             </HBox>
@@ -67,19 +73,19 @@
                   <Insets left="40.0" top="25.0" />
                </VBox.margin>
             </Label>
-            <ComboBox fx:id="categoryFilter" prefWidth="150.0" promptText="Category" style="-fx-pref-width: 180; -fx-background-radius: 5;">
+            <ComboBox fx:id="categoryFilter" prefWidth="150.0" promptText="Category" style="-fx-pref-width: 180; -fx-background-radius: 5;" styleClass="filter-combo-box">
                <VBox.margin>
                   <Insets left="40.0" top="25.0" />
                </VBox.margin></ComboBox>
-            <ComboBox fx:id="completionFilter" prefWidth="150.0" promptText="Status" style="-fx-pref-width: 180; -fx-background-radius: 5;">
+            <ComboBox fx:id="completionFilter" prefWidth="150.0" promptText="Status" style="-fx-pref-width: 180; -fx-background-radius: 5;" styleClass="filter-combo-box">
                <VBox.margin>
                   <Insets left="40.0" top="25.0" />
                </VBox.margin></ComboBox>
-            <ComboBox fx:id="priorityFilter" prefWidth="150.0" promptText="Priority" style="-fx-pref-width: 180; -fx-background-radius: 5;">
+            <ComboBox fx:id="priorityFilter" prefWidth="150.0" promptText="Priority" style="-fx-pref-width: 180; -fx-background-radius: 5;" styleClass="filter-combo-box">
                 <VBox.margin>
                     <Insets left="40.0" top="25.0" />
                 </VBox.margin></ComboBox>
-             <DatePicker fx:id="dateFilter" style="-fx-pref-width: 180; -fx-background-radius: 5;">
+             <DatePicker fx:id="dateFilter" style="-fx-pref-width: 180; -fx-background-radius: 5;" styleClass="filter-date-picker">
                <VBox.margin>
                   <Insets left="40.0" top="25.0" />
                </VBox.margin></DatePicker>

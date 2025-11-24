@@ -265,7 +265,9 @@ public class MainController {
             dialog.initModality(Modality.APPLICATION_MODAL);
         }
         dialog.setTitle("Add Task");
-        dialog.setScene(new Scene(dialogRoot));
+        Scene scene = new Scene(dialogRoot);
+        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
+        dialog.setScene(scene);
         dialog.showAndWait();
 
         refreshTaskView();
