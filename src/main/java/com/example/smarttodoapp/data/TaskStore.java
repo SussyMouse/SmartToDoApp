@@ -1,17 +1,13 @@
 package com.example.smarttodoapp.data;
 
 import com.example.smarttodoapp.model.Task;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.nio.file.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class TaskStore {

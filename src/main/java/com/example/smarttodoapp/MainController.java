@@ -10,13 +10,17 @@ import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -109,6 +113,43 @@ public class MainController {
     @FXML
     public void handleExitApplication() {
         Platform.exit();
+    }
+
+    @FXML
+    public void showAboutDialog() {
+        Stage owner = getCurrentStage();
+
+        Stage dialog = new Stage();
+        if (owner != null) {
+            dialog.initOwner(owner);
+            dialog.initModality(Modality.APPLICATION_MODAL);
+        }
+
+        dialog.setTitle("About Smart ToDo");
+
+        Label heading = new Label("Need help? We're here.");
+        heading.setStyle("-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #f2f2f2;");
+
+        Label message = new Label(
+                "If there are any problems, please reach our technical team.\n" +
+                        "Email: SmarttodoTechnical@gmail.com\n" +
+                        "Contact: +60 16 - 457 3769"
+        );
+        message.setWrapText(true);
+        message.setStyle("-fx-text-fill: #e0e0e0; -fx-font-size: 14px;");
+
+        Button closeButton = new Button("Close");
+        closeButton.setStyle("-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); " +
+                "-fx-text-fill: #000000; -fx-font-size: 14px; -fx-background-radius: 20; -fx-padding: 8 16;");
+        closeButton.setOnAction(event -> dialog.close());
+
+        VBox layout = new VBox(12, heading, message, closeButton);
+        layout.setPadding(new Insets(20));
+        layout.setStyle("-fx-background-color: linear-gradient(to right, #0d0d0d, #3d3d3d);");
+
+        Scene scene = new Scene(layout, 460, 220);
+        dialog.setScene(scene);
+        dialog.showAndWait();
     }
 
     @FXML
