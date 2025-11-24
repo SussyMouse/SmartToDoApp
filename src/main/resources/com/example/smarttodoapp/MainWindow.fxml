@@ -29,10 +29,13 @@
                      <image>
                         <Image url="@../../../images/icon.png" />
                      </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
                   </ImageView>
                </children>
                <VBox.margin>
-                  <Insets />
+                  <Insets top="30.0" />
                </VBox.margin>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
@@ -94,7 +97,7 @@
                   <Font name="Segoe UI" size="20.0" />
                </font>
                <VBox.margin>
-                  <Insets left="50.0" top="100.0" />
+                  <Insets bottom="20.0" left="50.0" top="40.0" />
                </VBox.margin>
             </Button>
          </children>
