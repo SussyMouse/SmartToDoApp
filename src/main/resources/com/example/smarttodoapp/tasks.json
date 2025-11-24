@@ -1,25 +1,4 @@
 [ {
-  "name" : "Hi",
-  "description" : "Bye",
-  "category" : "Study",
-  "priority" : 1,
-  "dueDate" : "2025-11-24",
-  "completed" : false
-}, {
-  "name" : "gggg",
-  "description" : "12345",
-  "category" : "Shopping",
-  "priority" : 2,
-  "dueDate" : "2025-11-20",
-  "completed" : false
-}, {
-  "name" : "fdfdf",
-  "description" : "dffd",
-  "category" : "Work",
-  "priority" : 1,
-  "dueDate" : "2025-11-23",
-  "completed" : false
-}, {
   "name" : "fdfdfd",
   "description" : "fdfdfd",
   "category" : "Work",

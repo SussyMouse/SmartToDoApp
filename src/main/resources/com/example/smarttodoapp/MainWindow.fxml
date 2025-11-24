@@ -92,7 +92,7 @@
                <VBox.margin>
                   <Insets left="40.0" top="25.0" />
                </VBox.margin></DatePicker>
-            <Button mnemonicParsing="false" onAction="#applyFilters" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-pref-width: 140; -fx-pref-height: 30; -fx-background-radius: 30;" text="Apply">
+            <Button mnemonicParsing="false" onAction="#applyFilters" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-pref-width: 140; -fx-pref-height: 30; -fx-background-radius: 30;" styleClass="action-button" text="Apply">
                <font>
                   <Font name="Segoe UI" size="20.0" />
                </font>
@@ -157,7 +157,7 @@
                         <Insets left="75.0" right="350.0" />
                      </HBox.margin>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#switchToTaskFormScene" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-pref-width: 140; -fx-pref-height: 30; -fx-background-radius: 30;" text="Add Task">
+                  <Button mnemonicParsing="false" onAction="#switchToTaskFormScene" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-pref-width: 140; -fx-pref-height: 30; -fx-background-radius: 30;" styleClass="action-button" text="Add Task">
                      <font>
                         <Font name="Segoe UI" size="20.0" />
                      </font>

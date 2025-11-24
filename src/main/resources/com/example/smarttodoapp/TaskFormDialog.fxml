@@ -77,12 +77,12 @@
       <Region prefHeight="142.0" prefWidth="1280.0" />
       <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="1280.0" spacing="25.0">
          <children>
-             <Button fx:id="taskSaveButton" mnemonicParsing="false" onAction="#save" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-pref-width: 140; -fx-pref-height: 30; -fx-background-radius: 30;" text="Save">
+             <Button fx:id="taskSaveButton" mnemonicParsing="false" onAction="#save" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-pref-width: 140; -fx-pref-height: 30; -fx-background-radius: 30;" styleClass="action-button" text="Save">
                <font>
                   <Font name="Segoe UI" size="20.0" />
                </font>
             </Button>
-             <Button fx:id="taskCancelButton" mnemonicParsing="false" onAction="#cancel" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-pref-width: 140; -fx-pref-height: 30; -fx-background-radius: 30;" text="Cancel">
+             <Button fx:id="taskCancelButton" mnemonicParsing="false" onAction="#cancel" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-pref-width: 140; -fx-pref-height: 30; -fx-background-radius: 30;" styleClass="action-button" text="Cancel">
                <font>
                   <Font name="Segoe UI" size="20.0" />
                </font>
