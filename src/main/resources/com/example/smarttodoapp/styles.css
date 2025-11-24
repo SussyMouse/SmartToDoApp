@@ -283,7 +283,7 @@
 .filter-date-picker > .text-input,
 .filter-date-picker > .arrow-button {
     -fx-background-color: transparent;
-    -fx-text-fill: #000000;
+    -fx-text-fill: #b4b4b4;
 }
 
 .filter-date-picker > .arrow-button > .arrow {
