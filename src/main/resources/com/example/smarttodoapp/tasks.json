@@ -1,11 +1,4 @@
 [ {
-  "name" : "Hi",
-  "description" : "Bye",
-  "category" : "Study",
-  "priority" : 1,
-  "dueDate" : "2025-11-24",
-  "completed" : true
-}, {
   "name" : "fdfdfd",
   "description" : "fdfdfd",
   "category" : "Work",

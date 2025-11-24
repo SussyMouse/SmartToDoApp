@@ -300,3 +300,9 @@
 .filter-date-picker .text-input {
     -fx-prompt-text-fill: #666666;
 }
+
+.action-button:hover {
+    -fx-background-color: linear-gradient(to right, #e8e8e8, #ffffff);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 15, 0.5, 0, 6);
+    -fx-translate-y: -1;
+}

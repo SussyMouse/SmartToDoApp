@@ -100,17 +100,17 @@
        <Region prefHeight="180.0" prefWidth="1280.0" />
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
          <children>
-             <Button fx:id="markCompleteButton" mnemonicParsing="false" onAction="#toggleCompleted" prefWidth="210.0" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-background-radius: 20;" text="Mark as Completed">
+             <Button fx:id="markCompleteButton" mnemonicParsing="false" onAction="#toggleCompleted" prefWidth="210.0" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-background-radius: 20;" styleClass="action-button" text="Mark as Completed">
                <font>
                   <Font name="Segoe UI" size="20.0" />
                </font>
             </Button>
-             <Button mnemonicParsing="false" onAction="#editTask" prefWidth="150.0" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-background-radius: 20;" text="Edit Task">
+             <Button mnemonicParsing="false" onAction="#editTask" prefWidth="150.0" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-background-radius: 20;" styleClass="action-button" text="Edit Task">
                <font>
                   <Font name="Segoe UI" size="20.0" />
                </font>
             </Button>
-             <Button mnemonicParsing="false" onAction="#close" prefWidth="150.0" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-background-radius: 20;" text="Close">
+             <Button mnemonicParsing="false" onAction="#close" prefWidth="150.0" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-background-radius: 20;" styleClass="action-button" text="Close">
                <font>
                   <Font name="Segoe UI" size="20.0" />
                </font>
