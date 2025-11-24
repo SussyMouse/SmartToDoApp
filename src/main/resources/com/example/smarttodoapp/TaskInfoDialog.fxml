@@ -12,10 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
-      style="-fx-background-color: linear-gradient(to right, #000000, #737373); -fx-pref-height: 800; -fx-pref-width: 1280;"
-      xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.example.smarttodoapp.TaskInfoController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to right, #000000, #737373); -fx-pref-height: 800; -fx-pref-width: 1280;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smarttodoapp.TaskInfoController">
    <children>
       <MenuBar>
          <menus>
@@ -27,14 +24,14 @@
                   <MenuItem mnemonicParsing="false" text="Exit" />
                </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Edit">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Delete" />
-               </items>
-            </Menu>
             <Menu mnemonicParsing="false" text="Help">
                <items>
                   <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Exit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Exit Program" />
                </items>
             </Menu>
          </menus>
@@ -75,7 +72,7 @@
                                <Font name="Segoe UI" size="20.0" />
                            </font>
                        </Label>
-                       <ImageView fx:id="categoryIconView" fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" visible="false" managed="false" />
+                       <ImageView fx:id="categoryIconView" fitHeight="48.0" fitWidth="48.0" managed="false" pickOnBounds="true" preserveRatio="true" visible="false" />
                    </children>
                </HBox>
                <HBox alignment="BASELINE_LEFT" spacing="20.0">
@@ -128,23 +125,17 @@
        <Region prefHeight="180.0" prefWidth="1280.0" />
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
          <children>
-             <Button fx:id="markCompleteButton" mnemonicParsing="false" onAction="#toggleCompleted" prefWidth="210.0"
-                     style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-background-radius: 20;"
-                     text="Mark as Completed">
+             <Button fx:id="markCompleteButton" mnemonicParsing="false" onAction="#toggleCompleted" prefWidth="210.0" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-background-radius: 20;" text="Mark as Completed">
                <font>
                   <Font name="Segoe UI" size="20.0" />
                </font>
             </Button>
-             <Button mnemonicParsing="false" onAction="#editTask" prefWidth="150.0"
-                     style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-background-radius: 20;"
-                     text="Edit Task">
+             <Button mnemonicParsing="false" onAction="#editTask" prefWidth="150.0" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-background-radius: 20;" text="Edit Task">
                <font>
                   <Font name="Segoe UI" size="20.0" />
                </font>
             </Button>
-             <Button mnemonicParsing="false" onAction="#close" prefWidth="150.0"
-                     style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-background-radius: 20;"
-                     text="Close">
+             <Button mnemonicParsing="false" onAction="#close" prefWidth="150.0" style="-fx-background-color: linear-gradient(to right, #a6a6a6, #ffffff); -fx-background-radius: 20;" text="Close">
                <font>
                   <Font name="Segoe UI" size="20.0" />
                </font>
